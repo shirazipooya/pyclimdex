@@ -38,7 +38,7 @@ def resample_daily(X: xr.DataArray,
     return resample_op(X_resample)
 
 def max_consecutive_count(x):
-    assert hasattr(x, 'dtype') and x.dtype == np.bool, 'x should be a boolean ndarray or DataArray'
+    assert hasattr(x, 'dtype') and x.dtype == bool, 'x should be a boolean ndarray or DataArray'
     def _ffill(arr, axis):
         """
         Generic implementation of ffill borrowed from xarray.core.missing.ffill.
